@@ -86,6 +86,16 @@ export default function Home() {
               A tech company focused on building and scaling innovative SaaS products
               for internal ventures and external clients.
             </motion.p>
+            <motion.a
+              href="mailto:info@eoion-ltd.com"
+              variants={fadeInUp}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex bg-transparent hover:bg-blue-600 text-white border-2 border-blue-400 hover:border-blue-600 px-6 py-2.5 rounded-full text-lg font-semibold transition-all items-center gap-2 mx-auto group cursor-pointer"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.a>
           </motion.div>
         </div>
       </section>
@@ -245,22 +255,22 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             {[
               {
-                name: "John Doe",
+                name: "Ikoro Samuel",
                 role: "CEO & Founder",
                 image: "https://picsum.photos/seed/team1/400/400"
               },
               {
-                name: "Jane Smith",
+                name: "Ikoro Francis",
                 role: "CTO",
                 image: "https://picsum.photos/seed/team2/400/400"
               },
               {
-                name: "Robert Johnson",
+                name: "Ikoro Samuel",
                 role: "Lead Developer",
                 image: "https://picsum.photos/seed/team3/400/400"
               },
               {
-                name: "Emily Wilson",
+                name: "Ikoro Jessica",
                 role: "Product Manager",
                 image: "https://picsum.photos/seed/team4/400/400"
               }
@@ -333,8 +343,8 @@ export default function Home() {
                 whileHover={{ y: -10 }}
                 className="bg-white p-8 rounded-xl shadow-lg relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-white opacity-100"></div>
-                <div className="relative z-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-blue-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+                <div className="relative">
                   <div className="mb-6">
                     <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -343,7 +353,7 @@ export default function Home() {
                   <p className="text-slate-700 mb-6 text-lg relative z-10">{testimonial.quote}</p>
                   <div className="relative z-10">
                     <p className="font-semibold text-blue-600">{testimonial.author}</p>
-                    <p className="text-blue-500 text-sm">{testimonial.position}</p>
+                    <p className="text-slate-500 text-sm">{testimonial.position}</p>
                   </div>
                 </div>
               </motion.div>
@@ -353,7 +363,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-white">
         <motion.div
           style={{ opacity, scale, y }}
           className="container mx-auto px-4"
@@ -365,110 +375,31 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Ready to start your next project? Contact us for a free consultation.
+            <h2 className="text-4xl font-bold mb-4 text-slate-900">Get in Touch</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              Ready to start your next project? Contact us today to discuss your ideas.
             </p>
           </motion.div>
 
           <div className="max-w-2xl mx-auto">
-            <motion.form
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
             >
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-colors bg-white text-slate-900 placeholder-slate-400"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-colors bg-white text-slate-900 placeholder-slate-400"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-colors bg-white text-slate-900 placeholder-slate-400"
-                  placeholder="Tell us about your project"
-                />
-              </div>
-              <motion.button
+              <motion.a
+                href="mailto:info@eoion-ltd.com"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-all flex items-center justify-center gap-2"
+                className="inline-flex bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-lg font-semibold transition-all items-center gap-2 cursor-pointer"
               >
-                Send Message
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-            </motion.form>
+                Contact Us
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+            </motion.div>
           </div>
         </motion.div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-950 text-white relative overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"
-        />
-        <div className="container mx-auto px-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl font-bold mb-4"
-            >
-              Ready to Transform Your Business?
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-gray-300 max-w-2xl mx-auto mb-8"
-            >
-              Let's collaborate to build innovative solutions that drive your business forward.
-            </motion.p>
-            <motion.button
-              whileHover={{ scale: 1.05, x: 10 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all flex items-center gap-2 mx-auto group"
-            >
-              Contact Us
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-              >
-                <ArrowRight className="w-5 h-5" />
-              </motion.div>
-            </motion.button>
-          </motion.div>
-        </div>
       </section>
     </main>
   );
