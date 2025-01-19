@@ -34,7 +34,7 @@ export default function Legal() {
             </p>
             <h3 className="text-xl font-semibold mb-2">1. Services</h3>
             <p className="text-slate-700 mb-4">
-              Eoion LTD provides software development, consulting, and digital transformation services. All services are provided "as is" and subject to these terms.
+              Eoion LTD provides software development, consulting, and digital transformation services. All services are provided &quot;as is&quot; and subject to these terms.
             </p>
             <h3 className="text-xl font-semibold mb-2">2. Intellectual Property</h3>
             <p className="text-slate-700 mb-4">

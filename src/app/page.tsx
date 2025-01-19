@@ -5,8 +5,6 @@ import { ArrowRight, Code, Rocket, Layers } from 'lucide-react';
 import { useRef } from 'react';
 import Image from 'next/image';
 
-type DivElement = HTMLDivElement;
-
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -22,9 +20,9 @@ const staggerContainer = {
 };
 
 export default function Home() {
-  const targetRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: targetRef,
+    target: scrollRef,
     offset: ["start start", "end end"]
   });
 
@@ -39,7 +37,7 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen" ref={targetRef}>
+    <main className="min-h-screen" ref={scrollRef}>
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-blue-500 origin-left z-50"

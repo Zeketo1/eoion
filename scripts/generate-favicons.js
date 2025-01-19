@@ -1,3 +1,4 @@
+/* global console */
 /* eslint-env node */
 import sharp from 'sharp';
 import { promises as fs } from 'fs';
