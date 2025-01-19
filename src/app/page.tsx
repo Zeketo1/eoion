@@ -401,6 +401,101 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+              <ul className="space-y-2 text-slate-300">
+                <li>No 1 Eugene Oba St</li>
+                <li>Agbani Road</li>
+                <li>Enugu, Enugu State, Nigeria</li>
+                <li className="pt-2">
+                  <a href="mailto:info@eoion-ltd.com" className="hover:text-blue-400 transition-colors">
+                    info@eoion-ltd.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+2347040269700" className="hover:text-blue-400 transition-colors">
+                    +234 704 026 9700
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Company</h3>
+              <ul className="space-y-2 text-slate-300">
+                <li>
+                  <a href="/about" className="hover:text-blue-400 transition-colors">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/services" className="hover:text-blue-400 transition-colors">
+                    Our Services
+                  </a>
+                </li>
+                <li>
+                  <a href="/team" className="hover:text-blue-400 transition-colors">
+                    Team
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Legal</h3>
+              <ul className="space-y-2 text-slate-300">
+                <li>
+                  <a href="/terms" className="hover:text-blue-400 transition-colors">
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacy" className="hover:text-blue-400 transition-colors">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/refund" className="hover:text-blue-400 transition-colors">
+                    Refund Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 className="text-xl font-semibold mb-4">Connect</h3>
+              <ul className="space-y-2 text-slate-300">
+                <li>
+                  <a href="https://linkedin.com/company/eoion-ltd" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/eoionltd" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/eoion-ltd" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-slate-800 pt-8">
+            <p className="text-center text-slate-400">
+              &copy; {new Date().getFullYear()} Eoion LTD. All rights reserved. RC-8191402
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
