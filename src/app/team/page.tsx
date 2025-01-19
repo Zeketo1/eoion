@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion';
 import { Linkedin, Mail, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Team() {
   const team = [
     {
       name: "Ikoro Samuel",
       role: "CEO & Founder",
-      bio: "A visionary leader with extensive experience in software development and business strategy. Samuel leads Eoion LTD's mission to transform businesses through innovative technology solutions.",
+      bio: "A visionary leader with extensive experience in software development and business strategy. Samuel leads Eoion LTD&apos;s mission to transform businesses through innovative technology solutions.",
       image: "https://picsum.photos/seed/team1/400/400"
     },
     {
@@ -71,12 +72,13 @@ export default function Team() {
                 <div className="relative mb-6 rounded-xl overflow-hidden aspect-square">
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="w-full h-full"
+                    className="w-full h-full relative"
                   >
-                    <img 
+                    <Image 
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover transition-transform group-hover:scale-110"
+                      fill
+                      className="object-cover transition-transform group-hover:scale-110"
                     />
                   </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-0 group-hover:opacity-60 transition-opacity" />
@@ -120,8 +122,8 @@ export default function Team() {
             <div className="bg-slate-900/50 border border-slate-800 p-12 rounded-2xl">
               <h2 className="text-3xl font-bold mb-6">Join Our Team</h2>
               <p className="text-slate-300 text-lg mb-8">
-                We're always looking for talented individuals who are passionate about technology and innovation. 
-                If you're interested in joining our team, we'd love to hear from you.
+                We&apos;re always looking for talented individuals who are passionate about technology and innovation. 
+                If you&apos;re interested in joining our team, we&apos;d love to hear from you.
               </p>
               <motion.a
                 href="mailto:careers@eoion-ltd.com"

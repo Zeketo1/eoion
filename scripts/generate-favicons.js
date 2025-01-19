@@ -1,6 +1,11 @@
-const sharp = require('sharp');
-const fs = require('fs').promises;
-const path = require('path');
+/* eslint-env node */
+import sharp from 'sharp';
+import { promises as fs } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const sizes = {
   'favicon-16x16.png': 16,
@@ -11,32 +16,23 @@ const sizes = {
 };
 
 async function generateFavicons() {
-  const inputSvg = path.join(__dirname, '..', 'public', 'favicon.svg');
+  const inputSvg = join(__dirname, '..', 'public', 'favicon.svg');
   const svgBuffer = await fs.readFile(inputSvg);
 
   for (const [filename, size] of Object.entries(sizes)) {
     await sharp(svgBuffer)
       .resize(size, size)
       .png()
-      .toFile(path.join(__dirname, '..', 'public', filename));
+      .toFile(join(__dirname, '..', 'public', filename));
     
     console.log(`Generated ${filename}`);
   }
 
-  // Generate ICO file (16x16 and 32x32 combined)
-  const ico16 = await sharp(svgBuffer)
-    .resize(16, 16)
-    .png()
-    .toBuffer();
-
-  const ico32 = await sharp(svgBuffer)
+  // Generate ICO file (32x32 only, since 16x16 is rarely used nowadays)
+  await sharp(svgBuffer)
     .resize(32, 32)
     .png()
-    .toBuffer();
-
-  // Use sharp to create an ICO file
-  await sharp(ico32)
-    .toFile(path.join(__dirname, '..', 'public', 'favicon.ico'));
+    .toFile(join(__dirname, '..', 'public', 'favicon.ico'));
 
   console.log('Generated favicon.ico');
 }

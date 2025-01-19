@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 export default function Privacy() {
   return (
@@ -22,7 +21,7 @@ export default function Privacy() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">1. Introduction</h2>
             <p className="text-slate-700 mb-4">
-              Eoion LTD ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
+              Eoion LTD (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.
             </p>
           </section>
 

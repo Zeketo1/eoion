@@ -4,12 +4,6 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 export default function About() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
-  };
-
   return (
     <main className="bg-slate-950 text-white">
       {/* Hero Section */}
@@ -53,7 +47,7 @@ export default function About() {
               </p>
               <p>
                 Our journey began with a simple mission: to make powerful technology accessible to businesses of all sizes. 
-                Today, we're proud to be at the forefront of digital transformation, helping companies navigate the 
+                Today, we&apos;re proud to be at the forefront of digital transformation, helping companies navigate the 
                 ever-evolving technological landscape.
               </p>
             </div>
@@ -151,7 +145,9 @@ export default function About() {
                 <ArrowRight className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Quality Focus</h3>
-                  <p className="text-slate-300">Commitment to delivering excellence in every project</p>
+                  <p className="text-slate-300">
+                    Commitment to delivering excellence in every project
+                  </p>
                 </div>
               </motion.div>
               <motion.div
@@ -161,7 +157,9 @@ export default function About() {
                 <ArrowRight className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Long-term Partnership</h3>
-                  <p className="text-slate-300">Building lasting relationships with our clients</p>
+                  <p className="text-slate-300">
+                    Building lasting relationships with our clients
+                  </p>
                 </div>
               </motion.div>
             </div>

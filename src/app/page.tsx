@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { ArrowRight, Code, Rocket, Layers } from 'lucide-react';
 import { useRef } from 'react';
+import Image from 'next/image';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -207,10 +208,12 @@ export default function Home() {
                 className="bg-white rounded-xl overflow-hidden shadow-xl"
               >
                 <div className="h-64 bg-slate-800 relative overflow-hidden">
-                  <img 
+                  <Image 
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </div>
                 <div className="p-8">
@@ -284,10 +287,12 @@ export default function Home() {
                 className="text-center"
               >
                 <div className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden">
-                  <img 
+                  <Image 
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </div>
                 <h3 className="text-xl font-semibold mb-1 text-slate-900">{member.name}</h3>
