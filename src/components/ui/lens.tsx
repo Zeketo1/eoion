@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+
+type DivElement = HTMLDivElement;
 
 interface LensProps {
   children: React.ReactNode;

@@ -5,6 +5,8 @@ import { ArrowRight, Code, Rocket, Layers } from 'lucide-react';
 import { useRef } from 'react';
 import Image from 'next/image';
 
+type DivElement = HTMLDivElement;
+
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },

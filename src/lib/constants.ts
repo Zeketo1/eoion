@@ -1,23 +1,28 @@
-const navMenu: NavMenu[] = [
+interface NavMenuItem {
+  name: string;
+  href: string;
+}
+
+const navMenu: NavMenuItem[] = [
   {
-    title: "Product",
-    link: "",
+    name: "Product",
+    href: "",
   },
   {
-    title: "Pricing",
-    link: "",
+    name: "Pricing",
+    href: "",
   },
   {
-    title: "Company",
-    link: "",
+    name: "Company",
+    href: "",
   },
   {
-    title: "Blog",
-    link: "",
+    name: "Blog",
+    href: "",
   },
   {
-    title: "Changelog",
-    link: "",
+    name: "Changelog",
+    href: "",
   },
 ];
 

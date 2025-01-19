@@ -30,7 +30,7 @@ export default function Legal() {
           <section className="mb-12">
             <h2 className="text-2xl font-semibold mb-4 text-slate-900">Terms and Conditions</h2>
             <p className="text-slate-700 mb-4">
-              By accessing and using the services provided by Eoion LTD, you agree to be bound by these terms and conditions.
+              By accessing and using our services, you agree to be bound by these &quot;Terms and Conditions&quot; and our Privacy Policy.
             </p>
             <h3 className="text-xl font-semibold mb-2">1. Services</h3>
             <p className="text-slate-700 mb-4">
