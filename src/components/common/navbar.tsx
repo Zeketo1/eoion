@@ -16,7 +16,7 @@ export default function Navbar() {
         <p className="font-heading font-semibold">Eoion</p>
       </div>
       <div className="flex items-center gap-6 glass2 py-3 px-4  rounded-full">
-        {navMenu.map(({ title }, i) => (
+        {navMenu.map(({ name: title }, i) => (
           <div className="text-[15px] font-normal opacity-90" key={i}>{title}</div>
         ))}
       </div>
